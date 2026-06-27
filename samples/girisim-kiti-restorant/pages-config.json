@@ -1,0 +1,146 @@
+{
+  "site_name" : "Girişim Kiti Restorant",
+  "version" : "1.0",
+  "social" : [ {
+    "platform" : "instagram"
+  } ],
+  "features" : {
+    "whatsapp" : {
+      "enabled" : false
+    },
+    "clickToCall" : {
+      "enabled" : true
+    },
+    "email" : {
+      "enabled" : false
+    },
+    "contactForm" : {
+      "enabled" : true,
+      "provider" : "formsubmit",
+      "publicId" : "girisimkiti@hotmail.com",
+      "placement" : "existing",
+      "page" : ""
+    },
+    "googleMaps" : {
+      "enabled" : true
+    },
+    "mobileContactBar" : {
+      "enabled" : false
+    },
+    "announcementBar" : {
+      "enabled" : false
+    },
+    "backToTop" : {
+      "enabled" : true
+    },
+    "cookieBanner" : {
+      "enabled" : true
+    },
+    "themeToggle" : {
+      "enabled" : true
+    },
+    "analytics" : {
+      "enabled" : false,
+      "gaId" : ""
+    },
+    "pixel" : {
+      "enabled" : false,
+      "pixelId" : ""
+    },
+    "searchConsole" : {
+      "enabled" : false,
+      "scId" : ""
+    }
+  },
+  "theme" : {
+    "tokens" : [ "bg", "primary", "secondary", "text", "accent" ]
+  },
+  "i18n" : {
+    "enabled" : false,
+    "languages" : [ "tr" ],
+    "default" : "tr"
+  },
+  "pages" : [ {
+    "name" : "Ana Sayfa",
+    "file" : "index.html",
+    "navbar" : true,
+    "editable" : [ {
+      "id" : "hero_badge",
+      "label" : "Üst Etiket",
+      "type" : "title"
+    }, {
+      "id" : "hero_title",
+      "label" : "Başlık",
+      "type" : "title"
+    }, {
+      "id" : "hero_text",
+      "label" : "Açıklama",
+      "type" : "text"
+    }, {
+      "id" : "hero_cta",
+      "label" : "Buton Metni",
+      "type" : "title"
+    }, {
+      "id" : "hero_image",
+      "label" : "Ana Görsel",
+      "type" : "image"
+    }, {
+      "id" : "menu_heading",
+      "label" : "Menü Başlığı",
+      "type" : "title"
+    }, {
+      "id" : "about_heading",
+      "label" : "Hakkımızda Başlığı",
+      "type" : "title"
+    }, {
+      "id" : "vision_text",
+      "label" : "Hakkımızda Metni",
+      "type" : "text"
+    }, {
+      "id" : "about_image",
+      "label" : "Hakkımızda Görseli",
+      "type" : "image"
+    }, {
+      "id" : "contact_heading",
+      "label" : "İletişim Başlığı",
+      "type" : "title"
+    }, {
+      "id" : "contact_text",
+      "label" : "İletişim Metni",
+      "type" : "text"
+    }, {
+      "id" : "address_text",
+      "label" : "Adres",
+      "type" : "text"
+    }, {
+      "id" : "phone_text",
+      "label" : "Telefon",
+      "type" : "title"
+    } ],
+    "collections" : [ {
+      "id" : "menu_list",
+      "label" : "Menü",
+      "itemFields" : [ {
+        "field" : "title",
+        "label" : "Yemek",
+        "type" : "title"
+      }, {
+        "field" : "desc",
+        "label" : "Açıklama",
+        "type" : "text"
+      }, {
+        "field" : "price",
+        "label" : "Fiyat",
+        "type" : "title"
+      } ]
+    }, {
+      "id" : "resimler",
+      "label" : "Restoranımızdan Kareler",
+      "itemFields" : [ {
+        "field" : "image",
+        "label" : "Görsel",
+        "type" : "image"
+      } ]
+    } ]
+  } ]
+}

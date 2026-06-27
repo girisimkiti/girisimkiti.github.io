@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- İçerik şablonu — RESTORAN (Meşe tarzı). base-restoran'ı devralır. -->
+<!--
+  WebForge taban layout — RESTORAN (Meşe tarzı, zarif, şarap/krem/altın, Cormorant + Montserrat).
+  Navbar hero üzerine ABSOLUTE biner (tam ekran hero için).
+-->
+<html lang="tr">
+<head>
+  <head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Restoran — Odun Ateşinde Mutfak</title>
+  <meta name="description" content="Mevsimlik, yerel ürünlerle odun ateşinde pişen özgün lezzetler.">
+  <meta name="keywords" content="restoran, fine dining, menü, rezervasyon">
+
+  <meta property="og:title" content="Restoran — Odun Ateşinde Mutfak">
+  <meta property="og:description" content="Mevsimlik, yerel ürünlerle odun ateşinde pişen özgün lezzetler.">
+  <meta property="og:image" content="images/hero.webp">
+  <meta property="og:url" content="index.html">
+  <meta property="og:type" content="website">
+
+  <!-- JSON-LD (LocalBusiness; yalnız ana sayfa/iletişim). -->
+  
+
+  <!-- Seçilen gövde fontu (#6; generator-only). fontLink yoksa base layout'un kendi font <link>'i
+       geçerli kalır. theme.css'teki --font-sans bu fontu gövdeye uygular. -->
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  
+
+  <!-- Renkler theme.css (CSS custom property); style.css Tailwind CLI ile purge edilmiş tek dosya.
+       theme.css ÖNCE yüklenir ki style.css'teki var(--color-*) referansları çözülsün. CDN YOK. -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Sticky navbar anchor düzeltmesi: #bölüm'e tıklanınca bölüm başlığı sticky header'ın ALTINDA
+       kalsın (üstüne binmesin) + yumuşak kaydırma. Tek yerden tüm sayfalara uygulanır. -->
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  </style>
+
+  <!-- Search Console doğrulama -->
+  
+  <!-- Google Analytics (GA4) -->
+  
+  <!-- Meta (Facebook) Pixel -->
+  
+
+</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <title>Restoran</title>
+</head>
+<body class="antialiased min-h-screen flex flex-col"
+      style="font-family:var(--font-sans, 'Montserrat',system-ui,sans-serif); background: var(--color-bg); color: var(--color-text);">
+
+  
+
+  <!-- Navbar (absolute, hero üzerinde, açık metin) -->
+  <header class="absolute top-0 inset-x-0 z-40">
+    <nav class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between" style="color:#fff;">
+      <a href="index.html" class="text-3xl font-bold tracking-wide" style="font-family:'Cormorant Garamond',serif; color:#fff;">Girişim Kiti Restorant</a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <li>
+          <a href="index.html#hikaye" class="transition hover:opacity-70" style="color:#fff;">Hikaye</a>
+        </li>
+        <li>
+          <a href="index.html#menu" class="transition hover:opacity-70" style="color:#fff;">Menü</a>
+        </li>
+        <li>
+          <a href="index.html#rezervasyon" class="transition hover:opacity-70" style="color:#fff;">Rezervasyon</a>
+        </li>
+      </ul>
+      <button type="button" id="nav_toggle" class="md:hidden" aria-label="Menü">
+        <span class="block w-6 h-0.5 mb-1" style="background:#fff;"></span>
+        <span class="block w-6 h-0.5 mb-1" style="background:#fff;"></span>
+        <span class="block w-6 h-0.5" style="background:#fff;"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="flex-1">
+
+  <!-- ============================== Hero (tam ekran) ============================== -->
+  <section class="relative h-screen min-h-[600px] flex items-center justify-center text-center" style="color:#fff;">
+    <img id="hero_image" alt="Restoran" class="absolute inset-0 w-full h-full object-cover"
+         src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1600&amp;q=80">
+    <div class="absolute inset-0" style="background: rgba(0,0,0,.55);"></div>
+    <div class="relative max-w-3xl px-6">
+      <p id="hero_badge" class="text-sm mb-6" style="letter-spacing:.3em; color: var(--color-accent);">ATEŞTE MUTFAK · 2014’TEN BERİ</p>
+      <h1 id="hero_title" class="text-5xl md:text-7xl font-bold leading-tight mb-6" style="font-family:'Cormorant Garamond',serif;">Odun ateşinde pişen sofralar</h1>
+      <p id="hero_text" class="text-lg" style="color: rgba(255,255,255,.85);">Mevsiminde, yerel üreticiden gelen malzemelerle hazırlanan özgün bir mutfak.</p>
+      <a id="hero_cta" href="#rezervasyon" class="inline-block mt-10 font-medium px-8 py-3.5 rounded-full transition hover:opacity-90"
+         style="background: var(--color-accent); color:#fff; letter-spacing:.05em;">Rezervasyon</a>
+    </div>
+  </section>
+
+  <!-- ============================== Hikaye (story) ============================== -->
+  <section id="hikaye" class="py-24 md:py-28">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="group relative rounded-sm overflow-hidden">
+        <img id="about_image" alt="Hikaye" class="rounded-sm w-full h-[28rem] object-cover shadow-xl transition duration-500"
+             src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&amp;fit=crop&amp;w=1000&amp;q=80">
+        
+      </div>
+      <div>
+        <p class="text-sm mb-4" style="letter-spacing:.25em; color: var(--color-accent);">HİKAYEMİZ</p>
+        <h2 id="about_heading" class="text-4xl md:text-5xl font-bold mb-6" style="font-family:'Cormorant Garamond',serif; color: var(--color-primary);">Sade, içten, lezzetli</h2>
+        <p id="vision_text" class="text-lg leading-relaxed" style="color: var(--color-secondary);">Küçük bir aile ocağı olarak başladık. Bugün hâlâ aynı tutkuyla, ateşin başında, mevsimin en taze ürünleriyle pişiriyoruz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Menü (Collection: menu) ============================== -->
+  <section id="menu" class="py-24 md:py-28" style="background: var(--color-text); color: var(--color-bg);">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-sm mb-3" style="letter-spacing:.25em; color: var(--color-accent);">LEZZETLER</p>
+        <h2 id="menu_heading" class="text-4xl md:text-5xl font-bold" style="font-family:'Cormorant Garamond',serif;">Menüden Seçkiler</h2>
+      </div>
+      <div id="menu_list" data-collection="menu" class="space-y-8">
+        <template id="menu_list__tpl">
+          <div class="flex justify-between items-baseline gap-4 border-b pb-5" style="border-color: rgba(255,255,255,.12);">
+            <div>
+              <h3 data-field="title" class="text-2xl" style="font-family:'Cormorant Garamond',serif; color:#fff;">Yemek</h3>
+              <p data-field="desc" class="text-sm mt-1" style="color: rgba(255,255,255,.6);">Açıklama</p>
+            </div>
+            <span data-field="price" class="text-xl whitespace-nowrap" style="font-family:'Cormorant Garamond',serif; color: var(--color-accent);">₺0</span>
+          </div>
+        </template>
+        <!-- Menü öğesi: opsiyonel arka plan görseli (_bg), hover efekti (_effect) ve tıklama linki
+             (_link) destekler (services-cards/stats-bar ile tutarlı; UI tüm collection öğeleri için
+             "Arka plan / Yükle" sunuyor). Arka plan varsa okunabilirlik için koyu örtü + iç padding. -->
+        <div class="relative overflow-hidden rounded-lg bg-cover bg-center border-b pb-5 transition duration-300 hover:scale-105" style="background-image:url(images/menu_list_bg1.webp?v=1);">
+          <div class="absolute inset-0" style="background: rgba(0,0,0,.55);"></div>
+          <div class="relative flex justify-between items-baseline gap-4 p-4">
+            <div>
+              <h3 data-field="title" class="text-2xl" style="font-family:'Cormorant Garamond',serif; color:#fff;">Közde Patlıcan Ezme</h3>
+              <p data-field="desc" class="text-sm mt-1" style="color: rgba(255,255,255,.6);">Tahin, nar ekşisi, közlenmiş biber</p>
+            </div>
+            <span data-field="price" class="text-xl whitespace-nowrap" style="font-family:'Cormorant Garamond',serif; color: var(--color-accent);">₺180</span>
+          </div>
+          
+        </div>
+        <div class="relative overflow-hidden rounded-lg bg-cover bg-center border-b pb-5 transition duration-300 hover:scale-105" style="background-image:url(images/menu_list_bg2.webp?v=1);">
+          <div class="absolute inset-0" style="background: rgba(0,0,0,.55);"></div>
+          <div class="relative flex justify-between items-baseline gap-4 p-4">
+            <div>
+              <h3 data-field="title" class="text-2xl" style="font-family:'Cormorant Garamond',serif; color:#fff;">Odun Ateşinde Kuzu</h3>
+              <p data-field="desc" class="text-sm mt-1" style="color: rgba(255,255,255,.6);">8 saat pişmiş, mevsim sebzeleri ile</p>
+            </div>
+            <span data-field="price" class="text-xl whitespace-nowrap" style="font-family:'Cormorant Garamond',serif; color: var(--color-accent);">₺420</span>
+          </div>
+          
+        </div>
+        <div class="relative overflow-hidden rounded-lg bg-cover bg-center border-b pb-5 transition duration-300 hover:scale-105" style="background-image:url(images/menu_list_bg3.webp?v=1);">
+          <div class="absolute inset-0" style="background: rgba(0,0,0,.55);"></div>
+          <div class="relative flex justify-between items-baseline gap-4 p-4">
+            <div>
+              <h3 data-field="title" class="text-2xl" style="font-family:'Cormorant Garamond',serif; color:#fff;">Mangalda Levrek</h3>
+              <p data-field="desc" class="text-sm mt-1" style="color: rgba(255,255,255,.6);">Günlük taze, limon ve kekik</p>
+            </div>
+            <span data-field="price" class="text-xl whitespace-nowrap" style="font-family:'Cormorant Garamond',serif; color: var(--color-accent);">₺360</span>
+          </div>
+          
+        </div>
+        <div class="relative overflow-hidden rounded-lg bg-cover bg-center border-b pb-5 transition duration-300 hover:scale-105" style="background-image:url(images/menu_list_bg4.webp?v=1);">
+          <div class="absolute inset-0" style="background: rgba(0,0,0,.55);"></div>
+          <div class="relative flex justify-between items-baseline gap-4 p-4">
+            <div>
+              <h3 data-field="title" class="text-2xl" style="font-family:'Cormorant Garamond',serif; color:#fff;">Fırın Sütlaç</h3>
+              <p data-field="desc" class="text-sm mt-1" style="color: rgba(255,255,255,.6);">Geleneksel, odun fırınında</p>
+            </div>
+            <span data-field="price" class="text-xl whitespace-nowrap" style="font-family:'Cormorant Garamond',serif; color: var(--color-accent);">₺120</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Rezervasyon (iletişim) ============================== -->
+  <section id="rezervasyon" class="py-24 md:py-28 text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <p class="text-sm mb-3" style="letter-spacing:.25em; color: var(--color-accent);">REZERVASYON</p>
+      <h2 id="contact_heading" class="text-4xl md:text-5xl font-bold mb-5" style="font-family:'Cormorant Garamond',serif; color: var(--color-primary);">Masanızı ayırtın</h2>
+      <p id="contact_text" class="text-lg mb-8" style="color: var(--color-secondary);">Akşam yemeği için rezervasyon önerilir.</p>
+      <p id="phone_text" class="text-2xl font-semibold mb-2" style="color: var(--color-primary);">0212 000 00 00</p>
+      <p id="address_text" style="color: var(--color-secondary);">Kuzguncuk, Üsküdar, İstanbul</p>
+
+      <!-- İletişim/rezervasyon formu (etkinse; paylaşılan fragment — çok-sağlayıcı + AJAX + honeypot). -->
+      
+  <form data-feature="contactForm" method="post" class="max-w-xl mx-auto mt-8 flex flex-col gap-3 text-left" action="https://formsubmit.co/ajax/girisimkiti@hotmail.com">
+    <!-- Web3Forms gizli erişim anahtarı (yalnız web3forms sağlayıcısında dolu). -->
+    
+    <!-- Honeypot (spam tuzağı): insan görmez/boş bırakır, bot doldurur → gönderim reddedilir. -->
+    <input type="text" tabindex="-1" autocomplete="off" aria-hidden="true"
+           name="_honey" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+    <input type="text" name="name" placeholder="Adınız" required class="px-4 py-3 rounded-lg border" style="border-color: rgba(0,0,0,.15);">
+    <input type="email" name="email" placeholder="E-posta" required class="px-4 py-3 rounded-lg border" style="border-color: rgba(0,0,0,.15);">
+    <textarea name="message" placeholder="Mesajınız" rows="4" required class="px-4 py-3 rounded-lg border" style="border-color: rgba(0,0,0,.15);"></textarea>
+    <button type="submit" class="font-semibold px-6 py-3 rounded-lg" style="background: var(--color-primary); color:#fff;">Gönder</button>
+    <!-- AJAX durum mesajı (main.js doldurur); JS yoksa gizli kalır. Metinler data-* attribute'larında. -->
+    <p data-form-status hidden role="status" aria-live="polite" class="text-sm mt-1"
+       data-success="Mesajınız alındı, teşekkürler! En kısa sürede dönüş yapacağız."
+       data-error="Mesaj gönderilemedi. Lütfen tekrar deneyin veya bizi telefonla arayın."></p>
+  </form>
+
+
+      <div data-feature="googleMaps" class="mt-12">
+        <iframe width="100%" height="320"
+                style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Harita" src="https://www.google.com/maps?q=Kuzguncuk%2C+Kuzguncuk+%C3%87ar%C5%9F%C4%B1+Cd+No%3A41%2C+34674+%C3%9Csk%C3%BCdar%2F%C4%B0stanbul&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request 2 — kullanıcı-tanımlı özel section'lar (herhangi bir template'e eklenebilir). -->
+  <section id="resimler" data-collection="resimler" class="py-16 md:py-20"><div class="max-w-6xl mx-auto px-6"><h2 class="text-3xl md:text-4xl font-extrabold mb-10" style="color: var(--color-text);">Restoranımızdan Kareler</h2><div class="flex flex-col gap-8"><div data-card class="rounded-2xl"><img data-field="image" src="images/resimler_1.webp?v=1" alt="" class="rounded-xl w-full object-cover"></div><div data-card class="rounded-2xl"><img data-field="image" src="images/resimler_2.webp?v=1" alt="" class="rounded-xl w-full object-cover"></div><div data-card class="rounded-2xl"><img data-field="image" src="images/resimler_3.webp?v=1" alt="" class="rounded-xl w-full object-cover"></div><div data-card class="rounded-2xl"><img data-field="image" src="images/resimler_4.webp?v=1" alt="" class="rounded-xl w-full object-cover"></div><div data-card class="rounded-2xl"><img data-field="image" src="images/resimler_5.webp?v=1" alt="" class="rounded-xl w-full object-cover"></div><div data-card class="rounded-2xl"><img data-field="image" src="images/resimler_6.webp?v=1" alt="" class="rounded-xl w-full object-cover"></div></div></div></section>
+</main>
+
+  <footer class="py-12 mt-auto" style="background: var(--color-text); color: var(--color-bg);">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <span class="text-2xl font-bold" style="font-family:'Cormorant Garamond',serif;">Girişim Kiti Restorant</span>
+      <div class="flex items-center gap-4">
+        <a data-social="instagram" href="https://instagram.com/girisimkiti" aria-label="Instagram" rel="noopener" target="_blank" class="hover:opacity-70 transition inline-flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25zm0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38zm6.96-11.4a1.58 1.58 0 1 1-1.57-1.58 1.58 1.58 0 0 1 1.57 1.58z" /></svg></a>
+      </div>
+      <p class="text-sm opacity-80">
+        <span>© 2026</span>
+        <span>Girişim Kiti Restorant</span>
+      </p>
+    </div>
+  </footer>
+
+  
+
+  <!-- Mobil sabit iletişim çubuğu (alt; tel/whatsapp kısayolları). -->
+  
+
+  <!-- WhatsApp sabit buton (inline SVG logo; ikon fontu/CDN yok). -->
+  
+
+  <!-- "Yukarı çık" butonu. -->
+  <button type="button" id="back_to_top" data-feature="backToTop"
+          class="fixed bottom-6 left-6 rounded-full w-11 h-11 shadow-lg z-40"
+          style="background: var(--color-primary); color: #fff;" aria-label="Yukarı çık">↑</button>
+
+  <!-- Çerez/KVKK onay bandı. -->
+  <div data-feature="cookieBanner" id="cookie_banner"
+       class="fixed bottom-0 inset-x-0 text-sm p-4 flex items-center justify-between gap-4 z-50"
+       style="display:none; background: var(--color-text); color: var(--color-bg);">
+    <span>Bu site deneyiminizi iyileştirmek için çerez kullanır.</span>
+    <button type="button" id="cookie_accept" class="underline font-semibold">Kabul Et</button>
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

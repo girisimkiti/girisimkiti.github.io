@@ -1,0 +1,9 @@
+/* WebForge — tema renkleri (CSS custom property). Editör yalnız bu değerleri değiştirir; Tailwind yeniden derlenmez. */
+:root {
+  --color-bg: #faf6f0;
+  --color-primary: #7c2d12;
+  --color-secondary: #78716c;
+  --color-text: #1c1917;
+  --color-accent: #b45309;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
