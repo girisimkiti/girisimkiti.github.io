@@ -1,1 +1,0 @@
-# girisimkiti.github.io
