@@ -10,8 +10,8 @@
 
 Hazır sitelerimizi aşağıdaki linklerden canlı olarak deneyimleyebilirsiniz:
 
-- 🍽️ [**Hazır Restoran Sitesi**](/samples/girisim-kiti-restorant/index.html)
-- 🔧 [**Hazır Tesisatçı Sitesi**](/samples/girisim-kiti-tesisatci/index.html)
+- 🍽️ <a href="/samples/girisim-kiti-restorant/index.html" target="_blank" rel="noopener noreferrer"><strong>Hazır Restoran Sitesi</strong></a>
+- 🔧 <a href="/samples/girisim-kiti-tesisatci/index.html" target="_blank" rel="noopener noreferrer"><strong>Hazır Tesisatçı Sitesi</strong></a>
 
 **Kullanım alanları:**
 `Restoran` • `Kafe` • `Bistro` • `Elektrikçi` • `Tesisatçı` • `Halı Yıkama` • `Kombi Tamiri` • `VE DAHA YÜZLERCESİ`
