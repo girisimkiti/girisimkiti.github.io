@@ -1,0 +1,18 @@
+/* WebForge — tema renkleri (CSS custom property). Editör yalnız bu değerleri değiştirir; Tailwind yeniden derlenmez. */
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #ea580c;
+  --color-secondary: #475569;
+  --color-text: #0f172a;
+  --color-accent: #475569;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+}
+
+/* WebForge — yeniden kullanılabilir cam (glassmorphic) kart; tema-duyarlı, her zeminde görünür. */
+.wf-glass {
+  background: color-mix(in srgb, var(--color-text) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-text) 14%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}

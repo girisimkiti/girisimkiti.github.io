@@ -1,0 +1,148 @@
+{
+  "site_name" : "Girişim Kiti Tesisatçı",
+  "version" : "1.0",
+  "social" : [ {
+    "platform" : "instagram"
+  }, {
+    "platform" : "pinterest"
+  } ],
+  "features" : {
+    "whatsapp" : {
+      "enabled" : true
+    },
+    "clickToCall" : {
+      "enabled" : true
+    },
+    "email" : {
+      "enabled" : true
+    },
+    "contactForm" : {
+      "enabled" : true,
+      "provider" : "formsubmit",
+      "publicId" : "girisimkiti@hotmail.com",
+      "placement" : "newpage",
+      "page" : ""
+    },
+    "googleMaps" : {
+      "enabled" : true
+    },
+    "mobileContactBar" : {
+      "enabled" : true
+    },
+    "announcementBar" : {
+      "enabled" : true
+    },
+    "backToTop" : {
+      "enabled" : true
+    },
+    "cookieBanner" : {
+      "enabled" : false
+    },
+    "themeToggle" : {
+      "enabled" : true
+    },
+    "analytics" : {
+      "enabled" : false,
+      "gaId" : ""
+    },
+    "pixel" : {
+      "enabled" : false,
+      "pixelId" : ""
+    },
+    "searchConsole" : {
+      "enabled" : false,
+      "scId" : ""
+    }
+  },
+  "theme" : {
+    "tokens" : [ "bg", "primary", "secondary", "text", "accent" ]
+  },
+  "i18n" : {
+    "enabled" : false,
+    "languages" : [ "tr" ],
+    "default" : "tr"
+  },
+  "pages" : [ {
+    "name" : "Ana Sayfa",
+    "file" : "index.html",
+    "navbar" : true,
+    "editable" : [ {
+      "id" : "hero_badge",
+      "label" : "Üst Etiket",
+      "type" : "title"
+    }, {
+      "id" : "hero_title",
+      "label" : "Başlık",
+      "type" : "title"
+    }, {
+      "id" : "hero_text",
+      "label" : "Açıklama",
+      "type" : "text"
+    }, {
+      "id" : "hero_cta",
+      "label" : "Buton Metni",
+      "type" : "title"
+    }, {
+      "id" : "hero_image",
+      "label" : "Ana Görsel",
+      "type" : "image"
+    }, {
+      "id" : "services_heading",
+      "label" : "Hizmetler Başlığı",
+      "type" : "title"
+    }, {
+      "id" : "about_heading",
+      "label" : "Hakkımızda Başlığı",
+      "type" : "title"
+    }, {
+      "id" : "vision_text",
+      "label" : "Hakkımızda Metni",
+      "type" : "text"
+    }, {
+      "id" : "contact_heading",
+      "label" : "İletişim Başlığı",
+      "type" : "title"
+    }, {
+      "id" : "contact_text",
+      "label" : "İletişim Metni",
+      "type" : "text"
+    }, {
+      "id" : "address_text",
+      "label" : "Adres",
+      "type" : "text"
+    }, {
+      "id" : "phone_text",
+      "label" : "Telefon",
+      "type" : "title"
+    } ],
+    "collections" : [ {
+      "id" : "services_list",
+      "label" : "Hizmetler",
+      "itemFields" : [ {
+        "field" : "icon",
+        "label" : "İkon",
+        "type" : "title"
+      }, {
+        "field" : "title",
+        "label" : "Başlık",
+        "type" : "title"
+      }, {
+        "field" : "text",
+        "label" : "Açıklama",
+        "type" : "text"
+      } ]
+    }, {
+      "id" : "projects__items",
+      "label" : "Bazı Projelerimiz",
+      "itemFields" : [ {
+        "field" : "image",
+        "label" : "Görsel",
+        "type" : "image"
+      }, {
+        "field" : "text",
+        "label" : "Metin",
+        "type" : "text"
+      } ]
+    } ]
+  } ]
+}

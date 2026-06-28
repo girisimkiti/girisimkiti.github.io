@@ -1,0 +1,237 @@
+<!doctype html>
+<!-- İçerik şablonu — HİZMET (Usta tarzı). base-hizmet'i devralır. -->
+<!--
+  WebForge taban layout — HİZMET (yerel hizmet/Usta tarzı, açık, turuncu, Plus Jakarta Sans).
+-->
+<html lang="tr">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Acil Tesisat ve Kombi Servisi</title>
+  <meta name="description" content="7/24 acil tesisat, su kaçağı ve kombi servisi. Hızlı, garantili çözüm.">
+  <meta name="keywords" content="tesisat, su kaçağı, kombi servisi, acil servis">
+
+  <meta property="og:title" content="Acil Tesisat ve Kombi Servisi">
+  <meta property="og:description" content="7/24 acil tesisat, su kaçağı ve kombi servisi. Hızlı, garantili çözüm.">
+  <meta property="og:image" content="images/hero.webp">
+  <meta property="og:url" content="index.html">
+  <meta property="og:type" content="website">
+
+  <!-- JSON-LD (LocalBusiness; yalnız ana sayfa/iletişim). -->
+  
+
+  <!-- Seçilen gövde fontu (#6; generator-only). fontLink yoksa base layout'un kendi font <link>'i
+       geçerli kalır. theme.css'teki --font-sans bu fontu gövdeye uygular. -->
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  
+
+  <!-- Renkler theme.css (CSS custom property); style.css Tailwind CLI ile purge edilmiş tek dosya.
+       theme.css ÖNCE yüklenir ki style.css'teki var(--color-*) referansları çözülsün. CDN YOK. -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Sticky navbar anchor düzeltmesi: #bölüm'e tıklanınca bölüm başlığı sticky header'ın ALTINDA
+       kalsın (üstüne binmesin) + yumuşak kaydırma. Tek yerden tüm sayfalara uygulanır. -->
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  </style>
+
+  <!-- Search Console doğrulama -->
+  
+  <!-- Google Analytics (GA4) -->
+  
+  <!-- Meta (Facebook) Pixel -->
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+</head>
+<body class="antialiased min-h-screen flex flex-col" style="font-family:var(--font-sans, 'Plus Jakarta Sans',system-ui,sans-serif); background: var(--color-bg); color: var(--color-text);">
+
+  <!-- Üst bilgi şeridi: 7/24 + telefon -->
+  <div class="text-sm" style="background: var(--color-text); color: rgba(255,255,255,.85);">
+    <div class="max-w-6xl mx-auto px-6 h-10 flex items-center justify-between">
+      <span data-feature="announcement">İşletmenize ait benzer sayfayı 1 günde teslim ediyoruz. Hemen Whatsapdan İletişime Geçin</span>
+      
+      <a href="tel:905066492433" class="font-semibold hover:opacity-80" style="color:#fff;">📞 Hemen Ara</a>
+    </div>
+  </div>
+
+  <!-- Navbar (sticky beyaz) -->
+  <header class="sticky top-0 z-40 border-b" style="background: var(--color-bg); border-color: rgba(0,0,0,.07);">
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight" style="color: var(--color-text);">
+        <span>Girişim Kiti Tesisatçı</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <li>
+          <a href="#hizmetler" class="transition hover:opacity-70" style="color: var(--color-text);">Hizmetler</a>
+        </li>
+        <li>
+          <a href="#neden-biz" class="transition hover:opacity-70" style="color: var(--color-text);">Neden Biz</a>
+        </li>
+        <li>
+          <a href="#iletisim" class="transition hover:opacity-70" style="color: var(--color-text);">İletişim</a>
+        </li>
+      </ul>
+      <a href="#iletisim" class="hidden md:inline-block text-sm font-bold px-5 py-2.5 rounded-lg transition hover:opacity-90" style="background: var(--color-primary); color:#fff;">📞 Acil Çağrı</a>
+      <button type="button" id="nav_toggle" class="md:hidden" aria-label="Menü">
+        <span class="block w-6 h-0.5 mb-1" style="background: var(--color-text);"></span>
+        <span class="block w-6 h-0.5 mb-1" style="background: var(--color-text);"></span>
+        <span class="block w-6 h-0.5" style="background: var(--color-text);"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="flex-1">
+
+  <!-- ============================== Hero ============================== -->
+  <section class="relative" style="background: var(--color-text); color:#fff;">
+    <img id="hero_image" alt="Hizmet" class="absolute inset-0 w-full h-full object-cover transition duration-300 hover:scale-105" style="opacity:.22;" src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&amp;fit=crop&amp;w=1400&amp;q=80">
+    <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-32">
+      <span id="hero_badge" class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-5 transition duration-300 hover:scale-105" style="background: var(--color-primary); color:#fff;">⚡ 30 DAKİKADA KAPINIZDA</span>
+      <h1 id="hero_title" class="text-4xl md:text-6xl font-extrabold leading-[1.1] max-w-3xl transition duration-300 hover:scale-105">Su kaçağı mı var? Kombi mi arızalandı?</h1>
+      <p id="hero_text" class="text-lg md:text-xl mt-6 max-w-2xl transition duration-300 hover:scale-105" style="color: rgba(255,255,255,.85);">Deneyimli ekibimizle tesisat ve kombi arızalarında hızlı, garantili çözüm sunuyoruz.</p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a id="hero_cta" href="#iletisim" class="font-bold px-7 py-4 rounded-lg transition hover:opacity-90 duration-300 hover:scale-105" style="background: var(--color-primary); color:#fff;">📞 Acil Çağrı Hattı</a>
+        <a href="#hizmetler" class="font-bold px-7 py-4 rounded-lg border transition hover:bg-white hover:text-black" style="border-color: rgba(255,255,255,.4); color:#fff;">Hizmetlerimiz</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Hizmetler (Collection: services) ============================== -->
+  <section id="hizmetler" class="py-20 md:py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 id="services_heading" class="text-3xl md:text-4xl font-extrabold transition duration-300 hover:scale-105">Hizmetlerimiz</h2>
+      </div>
+      <div id="services_list" data-collection="services" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <template id="services_list__tpl">
+          <div class="p-7 rounded-2xl border text-center transition hover:shadow-lg" style="background: var(--color-bg); border-color: rgba(0,0,0,.07);">
+            <div data-field="icon" class="text-4xl mb-4">💧</div>
+            <h3 data-field="title" class="font-bold mb-2">Başlık</h3>
+            <p data-field="text" class="text-sm" style="color: var(--color-secondary);">Açıklama</p>
+          </div>
+        </template>
+        <div class="p-7 rounded-2xl border text-center transition hover:shadow-lg" style="background: var(--color-bg); border-color: rgba(0,0,0,.07);">
+          <div data-field="icon" class="text-4xl mb-4">💧</div>
+          <h3 data-field="title" class="font-bold mb-2">Su Kaçağı Tespiti</h3>
+          <p data-field="text" class="text-sm" style="color: var(--color-secondary);">Kırmadan, dökmeden cihazla noktasal tespit.</p>
+        </div>
+        <div class="p-7 rounded-2xl border text-center transition hover:shadow-lg" style="background: var(--color-bg); border-color: rgba(0,0,0,.07);">
+          <div data-field="icon" class="text-4xl mb-4">🔥</div>
+          <h3 data-field="title" class="font-bold mb-2">Kombi &amp; Petek</h3>
+          <p data-field="text" class="text-sm" style="color: var(--color-secondary);">Bakım, onarım ve montaj hizmetleri.</p>
+        </div>
+        <div class="p-7 rounded-2xl border text-center transition hover:shadow-lg" style="background: var(--color-bg); border-color: rgba(0,0,0,.07);">
+          <div data-field="icon" class="text-4xl mb-4">🚿</div>
+          <h3 data-field="title" class="font-bold mb-2">Tıkanıklık Açma</h3>
+          <p data-field="text" class="text-sm" style="color: var(--color-secondary);">Gider ve pis su tıkanıklıklarına hızlı müdahale.</p>
+        </div>
+        <div class="p-7 rounded-2xl border text-center transition hover:shadow-lg" style="background: var(--color-bg); border-color: rgba(0,0,0,.07);">
+          <div data-field="icon" class="text-4xl mb-4">🔧</div>
+          <h3 data-field="title" class="font-bold mb-2">Genel Tesisat</h3>
+          <p data-field="text" class="text-sm" style="color: var(--color-secondary);">Tadilat, tesisat yenileme ve montaj.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Neden Biz (vizyon/güven) ============================== -->
+  <section id="neden-biz" class="py-20 md:py-24" style="background: var(--color-accent);">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 id="about_heading" class="text-3xl md:text-4xl font-extrabold mb-5 transition duration-300 hover:scale-105">Neden Biz?</h2>
+        <p id="vision_text" class="text-lg leading-relaxed transition duration-300 hover:scale-105" style="color: var(--color-secondary);">20 yılı aşkın tecrübe, şeffaf fiyatlandırma ve işçilik garantisi. İşi ilk seferde doğru yapıyoruz.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl text-center" style="background: var(--color-bg);">
+          <div class="text-3xl font-extrabold" style="color: var(--color-primary);">20+</div>
+          <div class="text-sm mt-1" style="color: var(--color-secondary);">Yıl Tecrübe</div>
+        </div>
+        <div class="p-6 rounded-2xl text-center" style="background: var(--color-bg);">
+          <div class="text-3xl font-extrabold" style="color: var(--color-primary);">7/24</div>
+          <div class="text-sm mt-1" style="color: var(--color-secondary);">Acil Servis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== İletişim ============================== -->
+  <section id="iletisim" class="py-20 md:py-24" style="background: var(--color-text); color:#fff;">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 id="contact_heading" class="text-3xl md:text-4xl font-extrabold mb-4 transition duration-300 hover:scale-105">Hemen Arayın, Gelelim</h2>
+      <p id="contact_text" class="text-lg mb-8 transition duration-300 hover:scale-105" style="color: rgba(255,255,255,.8);">Arıza tespiti ve keşif ücretsizdir.</p>
+      <p id="phone_text" class="font-extrabold text-3xl mb-3 transition duration-300 hover:scale-105" style="color: var(--color-primary);">0212 000 00 00</p>
+      <p id="address_text" style="color: rgba(255,255,255,.8);" class="transition duration-300 hover:scale-105">Tüm İstanbul — Avrupa ve Anadolu Yakası</p>
+
+      <!-- İletişim formu (etkinse; paylaşılan fragment — çok-sağlayıcı + AJAX + honeypot). -->
+      
+  <form data-feature="contactForm" method="post" class="max-w-xl mx-auto mt-8 flex flex-col gap-3 text-left" action="https://formsubmit.co/ajax/girisimkiti@hotmail.com">
+    <!-- Web3Forms gizli erişim anahtarı (yalnız web3forms sağlayıcısında dolu). -->
+    
+    <!-- Honeypot (spam tuzağı): insan görmez/boş bırakır, bot doldurur → gönderim reddedilir. -->
+    <input type="text" tabindex="-1" autocomplete="off" aria-hidden="true" name="_honey" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+    <input type="text" name="name" placeholder="Adınız" required class="px-4 py-3 rounded-lg border" style="border-color: rgba(0,0,0,.15);">
+    <input type="email" name="email" placeholder="E-posta" required class="px-4 py-3 rounded-lg border" style="border-color: rgba(0,0,0,.15);">
+    <textarea name="message" placeholder="Mesajınız" rows="4" required class="px-4 py-3 rounded-lg border" style="border-color: rgba(0,0,0,.15);"></textarea>
+    <button type="submit" class="font-semibold px-6 py-3 rounded-lg" style="background: var(--color-primary); color:#fff;">Gönder</button>
+    <!-- AJAX durum mesajı (main.js doldurur); JS yoksa gizli kalır. Metinler data-* attribute'larında. -->
+    <p data-form-status hidden role="status" aria-live="polite" class="text-sm mt-1" data-success="Mesajınız alındı, teşekkürler! En kısa sürede dönüş yapacağız." data-error="Mesaj gönderilemedi. Lütfen tekrar deneyin veya bizi telefonla arayın."></p>
+  </form>
+
+
+      <div data-feature="googleMaps" class="mt-12">
+        <iframe width="100%" height="320" class="rounded-2xl" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Harita" src="https://www.google.com/maps?q=%C3%9Csk%C3%BCdar%2C+%C4%B0stanbul&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request 2 — kullanıcı-tanımlı özel section'lar (herhangi bir template'e eklenebilir). -->
+  <section id="projects" class="py-16 md:py-20"><div class="max-w-6xl mx-auto px-6"><h2 class="text-3xl md:text-4xl font-extrabold mb-10" style="color: var(--color-text);">Bazı Projelerimiz</h2><div id="projects__items" data-collection="projects" class="flex flex-col gap-8"><div data-card class="flex flex-col md:flex-row gap-8 md:gap-12 items-center"><div class="wf-glass rounded-2xl p-2 md:w-1/2"><img data-field="image" src="images/projects_1.webp?v=1" alt="" class="rounded-xl w-full aspect-video object-cover"></div><div data-field="text" class="md:w-1/2 leading-relaxed" style="color: var(--color-secondary);">Eski galvaniz borular modern PPRC tesisat sistemiyle değiştirilerek mutfak ve banyo hatları tamamen yenilendi. Uzun ömürlü ve güvenli kullanım sağlandı.</div></div><div data-card class="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center"><div class="wf-glass rounded-2xl p-2 md:w-1/2"><img data-field="image" src="images/projects_2.webp?v=1" alt="" class="rounded-xl w-full aspect-video object-cover"></div><div data-field="text" class="md:w-1/2 leading-relaxed" style="color: var(--color-secondary);">Kırmadan dökmeden robot cihaz kullanılarak mutfak ve banyo giderlerinde oluşan tıkanıklık kısa sürede giderildi.</div></div><div data-card class="flex flex-col md:flex-row gap-8 md:gap-12 items-center"><div class="wf-glass rounded-2xl p-2 md:w-1/2"><img data-field="image" src="images/projects_3.webp?v=1" alt="" class="rounded-xl w-full aspect-video object-cover"></div><div data-field="text" class="md:w-1/2 leading-relaxed" style="color: var(--color-secondary);">Özel temizleme makinesi kullanılarak kalorifer tesisatı temizlendi. Isınma performansı artırılırken enerji tasarrufu sağlandı.</div></div><div data-card class="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center"><div class="wf-glass rounded-2xl p-2 md:w-1/2"><img data-field="image" src="images/projects_4.webp?v=1" alt="" class="rounded-xl w-full aspect-video object-cover"></div><div data-field="text" class="md:w-1/2 leading-relaxed" style="color: var(--color-secondary);">Mutfak evyesi, batarya ve temiz su bağlantıları yenilenerek sızdırmaz ve uzun ömürlü bir tesisat sistemi oluşturuldu.</div></div><div data-card class="flex flex-col md:flex-row gap-8 md:gap-12 items-center"><div class="wf-glass rounded-2xl p-2 md:w-1/2"><img data-field="image" src="images/projects_5.webp?v=1" alt="" class="rounded-xl w-full aspect-video object-cover"></div><div data-field="text" class="md:w-1/2 leading-relaxed" style="color: var(--color-secondary);">Termal kamera ve akustik dinleme cihazları ile su kaçağının yeri hassas şekilde belirlenerek gereksiz kırımların önüne geçildi.</div></div></div></div></section>
+</main>
+
+  <footer class="py-12 mt-auto" style="background: var(--color-text); color: var(--color-bg);">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <span class="font-extrabold text-lg">Girişim Kiti Tesisatçı</span>
+      <div class="flex items-center gap-4">
+        <a data-social="instagram" href="https://instagram.com/girisimkiti" aria-label="Instagram" rel="noopener" target="_blank" class="hover:opacity-70 transition inline-flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25zm0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38zm6.96-11.4a1.58 1.58 0 1 1-1.57-1.58 1.58 1.58 0 0 1 1.57 1.58z" /></svg></a><a data-social="pinterest" href="https://www.shopier.com/girisimkiti" aria-label="Pinterest" rel="noopener" target="_blank" class="hover:opacity-70 transition inline-flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5"><path d="M12 2a10 10 0 0 0-3.65 19.32c-.05-.78-.1-1.98.02-2.83.11-.78.72-4.98.72-4.98s-.18-.37-.18-.92c0-.86.5-1.5 1.12-1.5.53 0 .79.4.79.88 0 .53-.34 1.33-.51 2.07-.15.62.31 1.12.92 1.12 1.1 0 1.95-1.16 1.95-2.84 0-1.48-1.07-2.52-2.59-2.52a2.69 2.69 0 0 0-2.8 2.7c0 .53.2 1.1.46 1.42.05.06.06.11.04.18l-.17.69c-.03.11-.09.14-.21.08-.78-.36-1.27-1.5-1.27-2.42 0-1.97 1.43-3.78 4.13-3.78 2.17 0 3.85 1.55 3.85 3.61 0 2.16-1.36 3.89-3.25 3.89-.63 0-1.23-.33-1.43-.72l-.39 1.49c-.14.55-.52 1.23-.78 1.65A10 10 0 1 0 12 2z" /></svg></a>
+      </div>
+      <p class="text-sm opacity-80">
+        <span>© 2026</span>
+        <span>Girişim Kiti Tesisatçı</span>. Tüm hakları saklıdır.
+      </p>
+    </div>
+  </footer>
+
+  
+
+  <!-- Mobil sabit iletişim çubuğu (alt; tel/whatsapp kısayolları). -->
+  <div data-feature="mobileContactBar" class="md:hidden fixed bottom-0 inset-x-0 flex z-40" style="background: var(--color-primary); color: #fff;">
+    <a href="tel:905066492433" class="flex-1 text-center py-3 font-semibold">📞 Ara</a>
+    <a href="https://wa.me/905066492433?text=Merhaba%2C+Hizmet+%C5%9Fablonunun+benzerinden+firmam+i%C3%A7in+yapt%C4%B1rmak+istiyorum." class="flex-1 text-center py-3 font-semibold" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+
+  <!-- WhatsApp sabit buton (inline SVG logo; ikon fontu/CDN yok). -->
+  <a data-feature="whatsapp" href="https://wa.me/905066492433?text=Merhaba%2C+Hizmet+%C5%9Fablonunun+benzerinden+firmam+i%C3%A7in+yapt%C4%B1rmak+istiyorum." class="hidden md:flex fixed bottom-6 right-6 w-14 h-14 rounded-full shadow-lg items-center justify-center z-50 transition hover:scale-105" style="background: #25D366; color: #fff;" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2.01c-5.46 0-9.9 4.44-9.9 9.9 0 1.74.46 3.45 1.33 4.95L2.05 22l5.26-1.38a9.86 9.86 0 0 0 4.73 1.21h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.84 9.84 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23-1.5 0-2.97-.4-4.26-1.17l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.25-4.35c0-4.54 3.69-8.24 8.24-8.24zm4.52 9.94c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23a7.5 7.5 0 0 1-1.38-1.72c-.14-.25-.01-.38.11-.5.11-.12.25-.3.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29z" />
+    </svg>
+  </a>
+
+  <!-- "Yukarı çık" butonu. -->
+  <button type="button" id="back_to_top" data-feature="backToTop" class="fixed bottom-6 left-6 rounded-full w-11 h-11 shadow-lg z-40" style="background: var(--color-primary); color: #fff;" aria-label="Yukarı çık">↑</button>
+
+  <!-- Çerez/KVKK onay bandı. -->
+  
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
