@@ -8,6 +8,15 @@
   --font-sans: 'DM Sans', system-ui, sans-serif;
 }
 
+/* WebForge — otomatik koyu palet (#6/#7). html.dark aktifken :root'u geçersiz kılar;
+   marka rengi (--color-primary) korunur. Tema Modu=Koyu (açık template'te) veya tema geçiş butonu tetikler. */
+html.dark {
+  --color-bg: #0f172a;
+  --color-text: #f1f5f9;
+  --color-accent: #1e293b;
+  --color-secondary: #94a3b8;
+}
+
 /* WebForge — yeniden kullanılabilir cam (glassmorphic) kart; tema-duyarlı, her zeminde görünür. */
 .wf-glass {
   background: color-mix(in srgb, var(--color-text) 6%, transparent);
@@ -15,4 +24,16 @@
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* WebForge — iletişim formu alanları her zeminde okunabilir (#8). */
+form[data-feature="contactForm"] input,
+form[data-feature="contactForm"] textarea,
+form[data-feature="contactForm"] select {
+  background: #ffffff;
+  color: #111827;
+}
+form[data-feature="contactForm"] input::placeholder,
+form[data-feature="contactForm"] textarea::placeholder {
+  color: #6b7280;
 }
